@@ -1,5 +1,3 @@
-Javascript Revision Series
-
 # JavaScript Revision Series ☕
 
 A personal JavaScript revision repository based on the Chai aur Code JavaScript series.
