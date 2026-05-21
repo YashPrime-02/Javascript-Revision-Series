@@ -13,3 +13,5 @@ Topics Covered:
 - Datatypes
 - Type Conversion
 - Operations
+- Stack Memory
+- Heap Memory
