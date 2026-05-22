@@ -19,3 +19,5 @@ Topics Covered:
 - Dates In Javascript
 - Strings in Javascript
 - Arrays in Javascript
+- Functions in Javascript
+
