@@ -15,3 +15,7 @@ Topics Covered:
 - Operations
 - Stack Memory
 - Heap Memory
+- Numbers And Math Operations
+- Dates In Javascript
+- Strings in Javascript
+- Arrays in Javascript
