@@ -20,4 +20,7 @@ Topics Covered:
 - Strings in Javascript
 - Arrays in Javascript
 - Functions in Javascript
+- Arrow Functions in Javascript
+- IIFE Functions in Javascript
+
 
