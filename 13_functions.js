@@ -8,6 +8,7 @@
 // ------------------------------------------
 
 function sayMyName(){
+
     console.log("H");
     console.log("I");
     console.log("T");
@@ -16,18 +17,27 @@ function sayMyName(){
     console.log("H");
 }
 
-// Function call
+
+// Function execution
 
 // sayMyName()
 
 
 // ==========================================
-// 📘 Function with Parameters
+// 📘 Function Parameters & Arguments
 // ==========================================
 
 // number1 and number2 => parameters
 
+// function addTwoNumbers(number1, number2){
+
+//     console.log(number1 + number2);
+// }
+
+
 function addTwoNumbers(number1, number2){
+
+    // Store result in variable
 
     // let result = number1 + number2
     // return result
@@ -49,9 +59,10 @@ const result = addTwoNumbers(3, 5)
 
 function loginUserMessage(username = "sam"){
 
-    // If username not provided
+    // Check if username exists
 
     if(!username){
+
         console.log("Please enter a username");
         return
     }
@@ -68,12 +79,14 @@ function loginUserMessage(username = "sam"){
 // ==========================================
 
 function calculateCartPrice(val1, val2, ...num1){
+
     return num1
 }
 
 
-// First two values go into val1 & val2
-// Remaining values stored in num1 array
+// val1 = 200
+// val2 = 400
+// Remaining values go into num1 array
 
 // console.log(calculateCartPrice(200, 400, 500, 2000))
 
@@ -83,9 +96,11 @@ function calculateCartPrice(val1, val2, ...num1){
 // ==========================================
 
 const user = {
+
     username: "hitesh",
     prices: 199
 }
+
 
 function handleObject(anyobject){
 
@@ -98,6 +113,7 @@ function handleObject(anyobject){
 // handleObject(user)
 
 handleObject({
+
     username: "sam",
     price: 399
 })
@@ -108,6 +124,7 @@ handleObject({
 // ==========================================
 
 const myNewArray = [200, 400, 100, 600]
+
 
 function returnSecondValue(getArray){
 
