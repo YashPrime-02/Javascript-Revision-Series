@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM | Chai aur code</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+    <!-- ==========================================
+         📘 Parent Container
+    ========================================== -->
+
+    <div class="parent">
+
+        <!-- HTML Comment Node -->
+
+        <!-- this is a comment -->
+
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+
+    </div>
+
+</body>
+
+<script>
+
+    // ==========================================
+    // 📘 Select Parent Element
+    // ==========================================
+
+    const parent = document.querySelector('.parent')
+
+    // console.log(parent);
+
+
+    // ==========================================
+    // 📘 children Property
+    // ==========================================
+
+    // Gives HTMLCollection of child elements
+
+    // console.log(parent.children);
+
+
+    // Access child using index
+
+    // console.log(parent.children[1].innerHTML);
+
+    // Output:
+    // Tuesday
+
+
+    // ==========================================
+    // 📘 Loop through Children
+    // ==========================================
+
+    // for (let i = 0; i < parent.children.length; i++) {
+
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+
+    // Output:
+    // Monday
+    // Tuesday
+    // Wednesday
+    // Thursday
+
+
+    // ==========================================
+    // 📘 Styling Child Element
+    // ==========================================
+
+    parent.children[1].style.color = "orange"
+
+    // Tuesday text becomes orange
+
+
+    // ==========================================
+    // 📘 firstElementChild & lastElementChild
+    // ==========================================
+
+    // console.log(parent.firstElementChild);
+
+    // Output:
+    // <div class="day">Monday</div>
+
+
+    // console.log(parent.lastElementChild);
+
+    // Output:
+    // <div class="day">Thursday</div>
+
+
+    // ==========================================
+    // 📘 Child to Parent Traversal
+    // ==========================================
+
+    const dayOne = document.querySelector('.day')
+
+    // console.log(dayOne);
+
+
+    // parentElement gives parent node
+
+    // console.log(dayOne.parentElement);
+
+
+    // Output:
+    // <div class="parent">...</div>
+
+
+    // ==========================================
+    // 📘 nextElementSibling
+    // ==========================================
+
+    // console.log(dayOne.nextElementSibling);
+
+
+    // Output:
+    // <div class="day">Tuesday</div>
+
+
+    // ==========================================
+    // 📘 childNodes
+    // ==========================================
+
+    console.log("NODES: ", parent.childNodes);
+
+
+    // childNodes includes:
+    // ✅ Elements
+    // ✅ Text nodes
+    // ✅ Comments
+
+
+    // Output:
+    // NodeList containing:
+    // text
+    // comment
+    // div.day
+    // text
+    // div.day
+    // ...
+
+</script>
+
+</html>
