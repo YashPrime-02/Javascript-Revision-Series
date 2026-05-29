@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="29_project_4.css" />
+  </head>
+  <body>
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="container">
+      <h1>Guess The Number</h1>
+      <p class="subtitle">Try and guess a random number between 1 and 100.</p>
+      <p class="subtitle">You have 10 attempts to guess the correct number.</p>
+      <form>
+        <input
+          type="text"
+          id="guessField"
+          placeholder="Enter your guess"
+          autocomplete="off"
+        />
+        <button id="subt">Submit Guess</button>
+      </form>
+      <div class="result-container">
+        <div class="result-card">
+          <h3>Previous Guesses</h3>
+          <p class="guesses"></p>
+        </div>
+        <div class="result-card">
+          <h3>Remaining Attempts</h3>
+          <p class="lastResult">10</p>
+        </div>
+      </div>
+      <div class="message-box lowOrHi"><h2>Start Guessing...</h2></div>
+      <div class="resultParas"></div>
+    </div>
+    <script src="29_project_4.js"></script>
+  </body>
+</html>
