@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Theme Switcher</title>
+    <link rel="stylesheet" href="/26_project_1/project_1.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Theme Switcher</h1>
+
+      <p class="subtitle">
+        Click any color box below to dynamically change the background theme
+        using JavaScript DOM Events.
+      </p>
+
+      <div class="button-container">
+        <div>
+          <div class="button" id="grey"></div>
+          <p class="color-name">Grey</p>
+        </div>
+
+        <div>
+          <div class="button" id="white"></div>
+          <p class="color-name">White</p>
+        </div>
+
+        <div>
+          <div class="button" id="blue"></div>
+          <p class="color-name">Blue</p>
+        </div>
+
+        <div>
+          <div class="button" id="yellow"></div>
+          <p class="color-name">Yellow</p>
+        </div>
+      </div>
+      <div class="selected-color">
+        Current Color : <span id="current-color">Default</span>
+      </div>
+    </div>
+
+    <script src="./project_1.js"></script>
+  </body>
+</html>
