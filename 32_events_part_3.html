@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>setInterval Example</title>
+</head>
+
+<body>
+
+    <h1>Chai aur Javascript</h1>
+
+    <button id="start">Start</button>
+
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+
+    // ==========================================
+    // 📘 setInterval() with Buttons
+    // ==========================================
+
+    // setInterval() runs code repeatedly
+    // after fixed time interval
+
+
+    const sayDate = function(str) {
+
+        console.log(str, Date.now());
+    }
+
+
+    // ==========================================
+    // 📘 Variable for Interval ID
+    // ==========================================
+
+    // Declared outside so both
+    // start and stop buttons can access it
+
+    let intervalId;
+
+
+    // ==========================================
+    // 📘 Start Button
+    // ==========================================
+
+    document.getElementById("start")
+    .addEventListener("click", function() {
+
+
+        // Guard Condition
+        // Prevent multiple intervals
+
+        if (intervalId) return;
+
+
+        // Start interval
+
+        intervalId = setInterval(sayDate, 1000, "hi");
+
+    });
+
+
+    // Output every 1 second:
+    // hi 1712345678901
+    // hi 1712345679901
+    // hi 1712345680901
+
+
+    // ==========================================
+    // 📘 Stop Button
+    // ==========================================
+
+    document.getElementById("stop")
+    .addEventListener("click", function() {
+
+        clearInterval(intervalId);
+
+
+        // Reset variable
+        // so Start button works again
+
+        intervalId = null;
+    });
+
+
+    // ==========================================
+    // 📘 Important Concepts
+    // ==========================================
+
+    // setInterval()
+    // => Executes repeatedly
+
+
+    // clearInterval()
+    // => Stops interval
+
+
+    // if(intervalId) return
+    // => Prevents multiple intervals stacking
+
+
+    // intervalId = null
+    // => Allows restarting again
+
+</script>
+
+</html>
