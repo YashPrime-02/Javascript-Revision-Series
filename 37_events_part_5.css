@@ -1,0 +1,178 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #141e30, #243b55);
+
+  font-family: Arial, sans-serif;
+
+  color: white;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+  width: 90%;
+  max-width: 700px;
+
+  text-align: center;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+h1 {
+
+  margin-bottom: 10px;
+
+  font-size: 2.5rem;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle {
+
+  margin-bottom: 30px;
+
+  color: #d1d1d1;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   DEFAULT BOX
+========================================= */
+
+.default-box {
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  font-size: 1.2rem;
+}
+
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.color {
+
+  width: 100%;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   TABLE HEADINGS
+========================================= */
+
+th {
+
+  background: #00bcd4;
+
+  padding: 15px;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   TABLE DATA
+========================================= */
+
+td {
+
+  background: rgba(255, 255, 255, 0.12);
+
+  padding: 18px;
+
+  font-size: 1.1rem;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+td:hover {
+
+  background: rgba(255, 255, 255, 0.2);
+
+  transition: 0.3s;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  td,
+  th {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
