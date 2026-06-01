@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>setTimeout Example</title>
+</head>
+
+<body>
+
+    <h1>Chai aur code</h1>
+
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+
+    // ==========================================
+    // 📘 Function Definition
+    // ==========================================
+
+    const sayHitesh = function(){
+
+        console.log("Hitesh");
+    }
+
+
+    // Function to change heading text
+
+    const changeText = function(){
+
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+
+    // ==========================================
+    // 📘 setTimeout()
+    // ==========================================
+
+    // Executes function once after given time
+
+    // Syntax:
+    // setTimeout(function, delay)
+
+    const changeMe = setTimeout(changeText, 2000)
+
+
+    // 2000 milliseconds = 2 seconds
+
+
+    // After 2 sec:
+    // "Chai aur code"
+    // changes to:
+    // "best JS series"
+
+
+    // ==========================================
+    // 📘 clearTimeout()
+    // ==========================================
+
+    // Stops setTimeout before execution
+
+    document.querySelector('#stop')
+    .addEventListener('click', function(){
+
+        clearTimeout(changeMe)
+
+        console.log("STOPPED")
+    })
+
+
+    // If button clicked before 2 sec:
+    // Text will NOT change
+
+
+    // Output:
+    // STOPPED
+
+</script>
+
+</html>
