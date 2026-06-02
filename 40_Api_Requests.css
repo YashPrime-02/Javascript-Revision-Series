@@ -1,0 +1,115 @@
+/* ==========================================
+   📘 Reset
+========================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   📘 Body Styling
+========================================== */
+
+body{
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #111827
+    );
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    transition: 0.5s ease;
+}
+
+
+/* ==========================================
+   📘 Main Heading
+========================================== */
+
+h1{
+    font-size: 3rem;
+
+    color: #38bdf8;
+
+    text-shadow: 0 0 20px rgba(56,189,248,0.6);
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   📘 Sub Heading
+========================================== */
+
+h3{
+    font-size: 1.2rem;
+
+    background: rgba(255,255,255,0.08);
+
+    padding: 15px 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   📘 Glow Animation
+========================================== */
+
+h1{
+    animation: glow 2s infinite alternate;
+}
+
+
+@keyframes glow{
+
+    from{
+        text-shadow: 0 0 10px rgba(56,189,248,0.4);
+    }
+
+    to{
+        text-shadow: 0 0 25px rgba(56,189,248,1);
+    }
+}
+
+
+/* ==========================================
+   📘 Responsive
+========================================== */
+
+@media(max-width: 768px){
+
+    h1{
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+
+    h3{
+        width: 90%;
+        font-size: 1rem;
+    }
+}

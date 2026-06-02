@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>XMLHttpRequest Example</title>
+    <link rel="stylesheet"
+          href="/40_Api_Requests.css">
+
+</head>
+
+<body style="background-color: #212121; color: white;">
+
+    <!-- ==========================================
+         📘 Heading
+    ========================================== -->
+
+    <h1>GitHub API Example</h1>
+
+
+    <!-- ==========================================
+         📘 Important Note
+    ========================================== -->
+
+    <h3>
+        Open Console to see Results
+        (Press F12 → Console)
+    </h3>
+
+
+    <!-- ==========================================
+         📘 XMLHttpRequest Ready States
+    ========================================== -->
+
+    <!--
+
+        0 => UNSENT
+             Client created.
+             open() not called yet.
+
+        1 => OPENED
+             open() has been called.
+
+        2 => HEADERS_RECEIVED
+             send() called and headers received.
+
+        3 => LOADING
+             Response is downloading.
+
+        4 => DONE
+             Request completed successfully.
+
+    -->
+
+</body>
+
+<script>
+
+    // ==========================================
+    // 📘 GitHub API URL
+    // ==========================================
+
+    const requestUrl =
+    'https://api.github.com/users/hiteshchoudhary'
+
+
+    // ==========================================
+    // 📘 Create XMLHttpRequest Object
+    // ==========================================
+
+    const xhr = new XMLHttpRequest()
+
+
+    // ==========================================
+    // 📘 open()
+    // ==========================================
+
+    // Syntax:
+    // xhr.open(method, url)
+
+    xhr.open('GET', requestUrl)
+
+
+    // ==========================================
+    // 📘 onreadystatechange
+    // ==========================================
+
+    // Runs every time readyState changes
+
+    xhr.onreadystatechange = function(){
+
+        console.log("Ready State:", xhr.readyState)
+
+
+        // ==========================================
+        // 📘 Check Request Completed
+        // ==========================================
+
+        if(xhr.readyState === 4){
+
+
+            // Convert JSON string into object
+
+            const data = JSON.parse(this.responseText)
+
+
+            // ==========================================
+            // 📘 Console Outputs
+            // ==========================================
+
+            console.log("Full Data:", data)
+
+            console.log("Data Type:", typeof data)
+
+            console.log("Followers:", data.followers)
+
+
+            // ==========================================
+            // 📘 Example Output
+            // ==========================================
+
+            // Ready State: 1
+            // Ready State: 2
+            // Ready State: 3
+            // Ready State: 4
+
+            // Full Data: { ... }
+
+            // Data Type: object
+
+            // Followers: 100000+
+        }
+    }
+
+
+    // ==========================================
+    // 📘 send()
+    // ==========================================
+
+    // Sends request to server
+
+    xhr.send()
+
+
+    // ==========================================
+    // 📘 Flow Summary
+    // ==========================================
+
+    // 1. Create request object
+
+    // 2. Open connection
+
+    // 3. Listen for state changes
+
+    // 4. Send request
+
+    // 5. Receive response
+
+    // 6. Convert JSON to object
+
+</script>
+
+</html>
