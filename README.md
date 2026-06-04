@@ -1,43 +1,58 @@
 # JavaScript Revision Series ☕
 
-A personal JavaScript revision repository based on the Chai aur Code JavaScript series.
+A comprehensive, well-commented JavaScript revision repository based on **Chai aur Code** series.
 
-Purpose:
-- Revise JavaScript fundamentals
-- Maintain commented code examples
-- Build a quick cheatsheet for interviews and projects
-- Track JavaScript concepts topic-by-topic
+This repository is designed for **quick revision**, **interview preparation**, and **concept clarity**.
 
-// Topics Covered:
+---
 
-// ✅ Variables
-// ✅ Data Types
-// ✅ Conversion & Operations
-// ✅ Strings
-// ✅ Numbers & Maths
-// ✅ Dates
-// ✅ Arrays
-// ✅ Objects
-// ✅ Functions
-// ✅ Scope
-// ✅ Hoisting
-// ✅ this Keyword
-// ✅ Arrow Functions
-// ✅ IIFE
-// ✅ Control Flow
-// ✅ Loops
-// ✅ High Order Array Methods
-// ✅ DOM
-// ✅ Events
-// ✅ Async JavaScript
-// ✅ API Calls
-// ✅ Promises
-// ✅ Closures
-// ✅ OOP
-// ✅ Classes
-// ✅ Inheritance
-// ✅ Static Properties
-// ✅ Getters & Setters
-// ✅ Object Properties
-// ✅ Prototypes
-// ✅ Call / Apply Concepts
+## 🎯 Purpose
+
+- Revise JavaScript from basics to advanced level
+- Maintain clean, well-commented code examples
+- Build a personal **JavaScript Cheatsheet**
+- Help in interviews and real-world projects
+
+---
+
+## 📚 Topics Covered
+
+### **Core Fundamentals**
+- Variables (`var`, `let`, `const`)
+- Data Types & Type Conversion
+- Strings, Numbers & Maths
+- Dates & Temporal API
+
+### **Data Structures**
+- Arrays & Array Methods
+- Objects & Object Manipulation
+
+### **Functions & Scope**
+- Functions, Parameters, Rest Operator
+- Scope, Lexical Scope & Closures
+- Hoisting
+- `this` Keyword, `call()`, `apply()`, `bind()`
+- Arrow Functions
+- IIFE
+
+### **Control Flow**
+- If-Else, Switch Case
+- Loops (`for`, `while`, `for...of`, `for...in`, `forEach`)
+
+### **DOM & Browser**
+- DOM Selectors & Manipulation
+- Events & Event Delegation
+- Creating, Editing & Removing Elements
+
+### **Advanced JavaScript**
+- Prototypes & Prototypal Inheritance
+- Classes & OOP
+- Getters & Setters
+- Static Properties & Methods
+- Property Descriptors
+- Promises, Async/Await
+- Fetch API & XMLHttpRequest
+
+---
+
+
