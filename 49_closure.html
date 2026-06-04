@@ -1,252 +1,180 @@
-// ==========================================
-// 📘 CLOSURES IN JAVASCRIPT
-// ==========================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
 
+<script>
 
-// Closure = Function +
-// Access to its outer scope variables
+    // ==========================================
+    // 📘 Basic Closure Example
+    // ==========================================
 
+    // function init() {
 
-// Even after outer function finishes,
-// inner function remembers variables
+    //     let name = "Mozilla";
 
+    //     function displayName() {
 
-// ==========================================
-// 📘 Basic Closure Example
-// ==========================================
+    //         // Inner function can access
+    //         // variables of outer function
 
-// function init() {
+    //         console.log(name);
+    //     }
 
-//     let name = "Mozilla";
+    //     displayName();
+    // }
 
-//     function displayName() {
+    // init();
 
-//         console.log(name);
-//     }
 
-//     displayName();
-// }
+    // ==========================================
+    // 📘 Lexical Scope Example
+    // ==========================================
 
-// init();
+    // function outer(){
 
+    //     let username = "hitesh"
 
-// Output:
-// Mozilla
+    //     // ❌ Error
+    //     // outer cannot access variables
+    //     // declared inside inner function
 
+    //     console.log("OUTER", secret);
 
-// displayName() can access
-// variable from outer function
+    //     function inner(){
 
+    //         let secret = "my123"
 
-// ==========================================
-// 📘 Lexical Scoping
-// ==========================================
+    //         // ✅ inner can access username
 
-// Inner functions can access
-// variables of outer functions
+    //         console.log("inner", username);
+    //     }
 
+    //     function innerTwo(){
 
-// function outer(){
+    //         // ✅ can access username
 
-//     let username = "hitesh"
+    //         console.log("innerTwo", username);
 
-//     function inner(){
+    //         // ❌ cannot access secret
+    //         // because secret belongs to inner()
 
-//         let secret = "my123"
+    //         console.log(secret);
+    //     }
 
-//         console.log(
-//             "inner",
-//             username
-//         );
-//     }
+    //     inner()
+    //     innerTwo()
 
-//     function innerTwo(){
+    // }
 
-//         console.log(
-//             "innerTwo",
-//             username
-//         );
+    // outer()
 
-//         // ❌ Cannot access
-//         // secret from inner()
+    // ❌ username not available outside outer()
 
-//         console.log(secret);
-//     }
+    // console.log("TOO OUTER", username);
 
-//     inner()
 
-//     innerTwo()
-// }
+    // ==========================================
+    // 📘 Closure Example
+    // ==========================================
 
-// outer();
+    // function makeFunc() {
 
+    //     const name = "Mozilla";
 
-// Rules:
+    //     function displayName() {
 
-// inner() can access outer()
+    //         console.log(name);
+    //     }
 
-// outer() cannot access inner()
+    //     // Returning function
+    //     // along with its remembered scope
 
+    //     return displayName;
+    // }
 
+    // const myFunc = makeFunc();
 
+    // Even after makeFunc() finishes,
+    // displayName still remembers name
 
-// ==========================================
-// 📘 Real Closure Example
-// ==========================================
+    // myFunc();
 
-// function makeFunc(){
+</script>
 
-//     const name = "Mozilla";
+<script>
 
-//     function displayName(){
+    // ==========================================
+    // 📘 Without Closure
+    // ==========================================
 
-//         console.log(name);
-//     }
+    // document.getElementById("orange").onclick = function(){
 
-//     return displayName;
-// }
+    //     document.body.style.backgroundColor = "orange"
+    // }
 
+    // document.getElementById("green").onclick = function(){
 
-// const myFunc = makeFunc()
+    //     document.body.style.backgroundColor = "green"
+    // }
 
-// myFunc()
+    // Repetitive code
 
 
-// Output:
-// Mozilla
+    // ==========================================
+    // 📘 Closure with Event Handlers
+    // ==========================================
 
+    function clickHandler(color){
 
-// Even though makeFunc()
-// finished execution,
-// displayName still remembers
-// variable name
+        // color becomes part of closure
 
+        return function(){
 
-// This is Closure
+            // Returned function remembers
+            // color even after clickHandler()
+            // execution is finished
 
-
-// ==========================================
-// 📘 Without Closure
-// ==========================================
-
-// document.getElementById("orange")
-// .onclick = function(){
-
-//     document.body.style
-//     .backgroundColor = "orange"
-// }
-
-
-// document.getElementById("green")
-// .onclick = function(){
-
-//     document.body.style
-//     .backgroundColor = "green"
-// }
-
-
-// Repetitive code
-
-
-// ==========================================
-// 📘 Closure Example with Buttons
-// ==========================================
-
-function clickHandler(color){
-
-    // color becomes part
-    // of closure
-
-    return function(){
-
-        document.body.style
-        .backgroundColor = color
+            document.body.style.backgroundColor = color
+        }
     }
-}
 
 
-// Create closure for orange
+    // Creates function that remembers
+    // color = "orange"
 
-document.getElementById('orange')
-.onclick = clickHandler("orange")
-
-
-// Create closure for green
-
-document.getElementById('green')
-.onclick = clickHandler("green")
+    document.getElementById('orange').onclick =
+    clickHandler("orange")
 
 
-// ==========================================
-// 📘 What Happens Internally
-// ==========================================
+    // Creates function that remembers
+    // color = "green"
 
-/*
-
-clickHandler("orange")
-
-↓
-
-returns function
-
-↓
-
-function remembers:
-
-color = "orange"
-
-↓
-
-button click
-
-↓
-
-background becomes orange
+    document.getElementById('green').onclick =
+    clickHandler("green")
 
 
---------------------------------
+    // ==========================================
+    // 📘 Flow
+    // ==========================================
 
-clickHandler("green")
+    // clickHandler("orange")
+    // ↓
+    // returns function
+    // ↓
+    // function remembers:
+    // color = "orange"
+    // ↓
+    // button click
+    // ↓
+    // background becomes orange
 
-↓
-
-returns function
-
-↓
-
-function remembers:
-
-color = "green"
-
-↓
-
-button click
-
-↓
-
-background becomes green
-
-*/
-
-
-// ==========================================
-// 📘 Why Closure Works Here
-// ==========================================
-
-// Returned function remembers
-// color variable even after
-// clickHandler() finishes
-
-
-// This remembered variable
-// is called Closure
-
-
-// ==========================================
-// 📘 Interview Definition
-// ==========================================
-
-// Closure is a function that
-// remembers variables from its
-// lexical scope even after the
-// outer function has finished execution.
+</script>
+</html>

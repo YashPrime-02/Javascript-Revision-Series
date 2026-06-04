@@ -8,19 +8,36 @@ Purpose:
 - Build a quick cheatsheet for interviews and projects
 - Track JavaScript concepts topic-by-topic
 
-Topics Covered:
-- Variables
-- Datatypes
-- Type Conversion
-- Operations
-- Stack Memory
-- Heap Memory
-- Numbers And Math Operations
-- Dates In Javascript
-- Strings in Javascript
-- Arrays in Javascript
-- Functions in Javascript
-- Arrow Functions in Javascript
-- IIFE Functions in Javascript
+// Topics Covered:
 
-
+// ✅ Variables
+// ✅ Data Types
+// ✅ Conversion & Operations
+// ✅ Strings
+// ✅ Numbers & Maths
+// ✅ Dates
+// ✅ Arrays
+// ✅ Objects
+// ✅ Functions
+// ✅ Scope
+// ✅ Hoisting
+// ✅ this Keyword
+// ✅ Arrow Functions
+// ✅ IIFE
+// ✅ Control Flow
+// ✅ Loops
+// ✅ High Order Array Methods
+// ✅ DOM
+// ✅ Events
+// ✅ Async JavaScript
+// ✅ API Calls
+// ✅ Promises
+// ✅ Closures
+// ✅ OOP
+// ✅ Classes
+// ✅ Inheritance
+// ✅ Static Properties
+// ✅ Getters & Setters
+// ✅ Object Properties
+// ✅ Prototypes
+// ✅ Call / Apply Concepts
